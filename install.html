@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Guide - My Store</title>
+    <link rel="stylesheet" href="./dist/assets/compiled/css/app.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 50px 0;
+        }
+        .install-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        .step {
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #435ebe;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .step-number {
+            background: #435ebe;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .success-box {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        code {
+            background: #2d3436;
+            color: #00b894;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            padding: 15px;
+            background: #f1f3f5;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .feature-item i {
+            font-size: 24px;
+            color: #435ebe;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="install-card">
+            <div class="text-center mb-5">
+                <h1 class="display-4 text-primary mb-3">🛍️ My Store</h1>
+                <h2>Complete E-commerce System</h2>
+                <p class="lead text-muted">Installation & Setup Guide</p>
+            </div>
+
+            <div class="success-box">
+                <h5>✅ System Ready!</h5>
+                <p class="mb-0">All files are in place. Follow the steps below to complete the installation.</p>
+            </div>
+
+            <h3 class="mt-5 mb-4">Installation Steps</h3>
+
+            <div class="step">
+                <h5>
+                    <span class="step-number">1</span>
+                    Start XAMPP Services
+                </h5>
+                <ol>
+                    <li>Open XAMPP Control Panel</li>
+                    <li>Click <strong>"Start"</strong> for <code>Apache</code></li>
+                    <li>Click <strong>"Start"</strong> for <code>MySQL</code></li>
+                    <li>Wait until both show "Running" status</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h5>
+                    <span class="step-number">2</span>
+                    Create Database
+                </h5>
+                <ol>
+                    <li>Open browser and go to: <a href="http://localhost/phpmyadmin" target="_blank">http://localhost/phpmyadmin</a></li>
+                    <li>Click <strong>"New"</strong> in the left sidebar</li>
+                    <li>Database name: <code>my_store</code></li>
+                    <li>Collation: <code>utf8mb4_general_ci</code></li>
+                    <li>Click <strong>"Create"</strong></li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h5>
+                    <span class="step-number">3</span>
+                    Import Database Schema
+                </h5>
+                <ol>
+                    <li>In phpMyAdmin, select <code>my_store</code> database</li>
+                    <li>Click <strong>"Import"</strong> tab at the top</li>
+                    <li>Click <strong>"Choose File"</strong></li>
+                    <li>Navigate to: <code>C:\xampp\htdocs\my_store\database\schema.sql</code></li>
+                    <li>Click <strong>"Go"</strong> at the bottom</li>
+                    <li>Wait for success message</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h5>
+                    <span class="step-number">4</span>
+                    Access Your Store
+                </h5>
+                <p><strong>Storefront:</strong></p>
+                <a href="http://localhost/my_store/" class="btn btn-primary mb-2" target="_blank">
+                    🛒 Open Store
+                </a>
+                <p class="mt-3"><strong>Admin Panel:</strong></p>
+                <a href="http://localhost/my_store/admin-dashboard.php" class="btn btn-success" target="_blank">
+                    👨‍💼 Open Admin Panel
+                </a>
+            </div>
+
+            <div class="warning-box mt-4">
+                <h5>🔐 Default Admin Credentials</h5>
+                <p><strong>Email:</strong> <code>admin@mystore.com</code></p>
+                <p class="mb-0"><strong>Password:</strong> <code>admin123</code></p>
+                <small class="text-danger">⚠️ Change this password after first login!</small>
+            </div>
+
+            <h3 class="mt-5 mb-4">What's Included</h3>
+
+            <div class="feature-list">
+                <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Product Catalog</span>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Shopping Cart</span>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Checkout System</span>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>User Accounts</span>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Order Management</span>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Admin Dashboard</span>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>20 Sample Products</span>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>8 Categories</span>
+                </div>
+            </div>
+
+            <h3 class="mt-5 mb-4">Sample Data Included</h3>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">📦 Categories</h5>
+                            <ul class="list-unstyled">
+                                <li>✓ Electronics</li>
+                                <li>✓ Clothing</li>
+                                <li>✓ Books</li>
+                                <li>✓ Home & Garden</li>
+                                <li>✓ Sports</li>
+                                <li>✓ Toys</li>
+                                <li>✓ Beauty</li>
+                                <li>✓ Food</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">🛍️ Products</h5>
+                            <ul class="list-unstyled">
+                                <li>✓ 20 Sample Products</li>
+                                <li>✓ With Images</li>
+                                <li>✓ With Descriptions</li>
+                                <li>✓ Varied Prices</li>
+                                <li>✓ Stock Quantities</li>
+                                <li>✓ Featured Items</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="mt-5 mb-4">Quick Test Steps</h3>
+
+            <ol class="lead">
+                <li>Browse products on the homepage</li>
+                <li>Add items to cart</li>
+                <li>View shopping cart</li>
+                <li>Create a customer account (or login as admin)</li>
+                <li>Complete checkout process</li>
+                <li>View order in customer dashboard</li>
+                <li>Login to admin panel and manage orders</li>
+            </ol>
+
+            <h3 class="mt-5 mb-4">Troubleshooting</h3>
+
+            <div class="accordion" id="troubleshootingAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#issue1">
+                            Database Connection Failed
+                        </button>
+                    </h2>
+                    <div id="issue1" class="accordion-collapse collapse show" data-bs-parent="#troubleshootingAccordion">
+                        <div class="accordion-body">
+                            <strong>Solutions:</strong>
+                            <ul>
+                                <li>Verify MySQL is running in XAMPP</li>
+                                <li>Check database name is <code>my_store</code></li>
+                                <li>Verify credentials in <code>includes/config.php</code></li>
+                                <li>Restart MySQL service</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#issue2">
+                            Page Not Found (404)
+                        </button>
+                    </h2>
+                    <div id="issue2" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                        <div class="accordion-body">
+                            <strong>Solutions:</strong>
+                            <ul>
+                                <li>Ensure files are in <code>C:\xampp\htdocs\my_store\</code></li>
+                                <li>Check Apache is running in XAMPP</li>
+                                <li>Clear browser cache</li>
+                                <li>Use correct URL: <code>http://localhost/my_store/</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#issue3">
+                            Can't Add to Cart
+                        </button>
+                    </h2>
+                    <div id="issue3" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                        <div class="accordion-body">
+                            <strong>Solutions:</strong>
+                            <ul>
+                                <li>Check browser console for JavaScript errors (F12)</li>
+                                <li>Verify <code>assets/js/cart.js</code> exists</li>
+                                <li>Confirm API files are in <code>api/</code> folder</li>
+                                <li>Check PHP errors in XAMPP logs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box mt-5">
+                <h4>🎉 Ready to Start!</h4>
+                <p class="mb-0">Your e-commerce system is fully installed and ready to use. Start customizing your store and adding products!</p>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="index.php" class="btn btn-primary btn-lg me-2">Visit Store</a>
+                <a href="admin-dashboard.php" class="btn btn-success btn-lg">Admin Panel</a>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="text-center text-muted">
+                <p><strong>Documentation:</strong> See README.md and SETUP_GUIDE.md for detailed information</p>
+                <p class="mb-0">&copy; <?php echo date('Y'); ?> My Store - Complete E-commerce System</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/assets/compiled/js/app.js"></script>
+</body>
+</html>
